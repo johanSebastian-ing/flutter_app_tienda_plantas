@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, unnecessary_new, unnecessary_const
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/inicioapp/home.dart';
 import 'package:flutter_application_1/inicioapp/registrationScreen.dart';
 
 import '../main.dart';
@@ -115,7 +116,15 @@ class _LoginScreenState extends State<LoginScreen> {
             textStyle: const TextStyle(fontSize: 22),
             shape: new RoundedRectangleBorder(
                 borderRadius: new BorderRadius.circular(30.0))),
-        onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          // ignore: prefer_const_constructors
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const Home()),
+                        );
+                      },
         child: const Text('Inicio'),
       ),
     );
